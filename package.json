@@ -1,0 +1,42 @@
+{
+  "name": "circle-progress.vue",
+  "private": false,
+  "version": "3.0.0",
+  "author": "mkolsv <mwkolosov@gmail.com> (https://github.com/mkolsv)",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "vue3",
+    "circle progress bar",
+    "vue 3 progress bar",
+    "vue progress bar"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mkolsv/circle-progress.vue"
+  },
+  "main": "./dist/umd.js",
+  "module": "./dist/es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/es.js",
+      "require": "./dist/umd.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.1.0",
+    "vite-plugin-css-injected-by-js": "^3.1.0",
+    "vite": "^4.2.0"
+  }
+}
