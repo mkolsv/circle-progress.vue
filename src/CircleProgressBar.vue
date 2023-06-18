@@ -59,6 +59,12 @@ const props = defineProps({
     default: '#3BB44A'
   },
 
+  colorBack: {
+    type: String,
+    required: false,
+    default: '#ECEEF1'
+  },
+
   percentage: {
     type: Boolean,
     required: false,
@@ -134,7 +140,7 @@ const getPercentage = computed(() => {
 }
 
 .circle-progress__line--back {
-  stroke: #ECEEF1;
+  stroke: v-bind("props.colorBack");
   stroke-dashoffset: 0;
 }
 

@@ -1,7 +1,7 @@
 {
   "name": "circle-progress.vue",
   "private": false,
-  "version": "3.0.0",
+  "version": "3.0.1",
   "author": "mkolsv <mwkolosov@gmail.com> (https://github.com/mkolsv)",
   "files": [
     "dist"
@@ -15,7 +15,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mkolsv/circle-progress.vue"
+    "url": "git+https://github.com/mkolsv/circle-progress.vue.git"
   },
   "main": "./dist/umd.js",
   "module": "./dist/es.js",
@@ -38,5 +38,10 @@
     "@vitejs/plugin-vue": "^4.1.0",
     "vite-plugin-css-injected-by-js": "^3.1.0",
     "vite": "^4.2.0"
-  }
+  },
+  "description": "![Circle Progress Bar](https://lh6.googleusercontent.com/fLQLNNyHZoBeyAkqRDEBqZwm5GN_ROBnm0OVIiZ4gw4DJa6i2KbGwiOisZl6UdyA9c4=w2400)",
+  "bugs": {
+    "url": "https://github.com/mkolsv/circle-progress.vue/issues"
+  },
+  "homepage": "https://github.com/mkolsv/circle-progress.vue#readme"
 }
