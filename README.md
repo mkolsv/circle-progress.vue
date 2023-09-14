@@ -23,18 +23,19 @@ import { CircleProgressBar } from 'circle-progress.vue';
 Please write me, if you need more props :)
 You can customize your progress bars as you want. For example:
 
-| Props             | Type                |                                  |
-|-------------------|---------------------|----------------------------------|
-| max*              | `Number           ` | Max value                        |
-| value*            | `Number`            | Current value.                   |
-| colorFilled       | `String`            | Circle color if limit exceed     |
-| colorUnfilled     | `String`            | Circle color if limit not exceed |
-| colorBack         | `String`            | Back circle color                |
-| percentage        | `BooleaN`           | Show percentage                  |
-| rounded           | `BooleaN`           | Rounding the circle line         |
-| animationDuration | `String`            | Animation Duration               |
-| strokeWidth       | `String`            | Circle Stroke width              |
-| reversedFilling   | `Boolean`           | Enable reversed filling          |
+| Props             | Type             |                                  |
+|-------------------|------------------|----------------------------------|
+| max*              | `Number`         | Max value                        |
+| value*            | `Number`         | Current value                    |
+| size              | `Number, String` | Size of the circle               |
+| colorFilled       | `String`         | Circle color if limit exceed     |
+| colorUnfilled     | `String`         | Circle color if limit not exceed |
+| colorBack         | `String`         | Back circle color                |
+| percentage        | `BooleaN`        | Show percentage                  |
+| rounded           | `BooleaN`        | Rounding the circle line         |
+| animationDuration | `String`         | Animation Duration               |
+| strokeWidth       | `String`         | Circle Stroke width              |
+| reversedFilling   | `Boolean`        | Enable reversed filling          |
 
 
 ## Other
