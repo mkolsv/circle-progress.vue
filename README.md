@@ -23,20 +23,19 @@ import { CircleProgressBar } from 'circle-progress.vue';
 Please write me, if you need more props :)
 You can customize your progress bars as you want. For example:
 
-| Props             | Type             |                                  |
-|-------------------|------------------|----------------------------------|
-| max*              | `Number`         | Max value                        |
-| value*            | `Number`         | Current value                    |
-| size              | `Number, String` | Size of the circle               |
-| colorFilled       | `String`         | Circle color if limit exceed     |
-| colorUnfilled     | `String`         | Circle color if limit not exceed |
-| colorBack         | `String`         | Back circle color                |
-| percentage        | `BooleaN`        | Show percentage                  |
-| rounded           | `BooleaN`        | Rounding the circle line         |
-| animationDuration | `String`         | Animation Duration               |
-| strokeWidth       | `String`         | Circle Stroke width              |
-| reversedFilling   | `Boolean`        | Enable reversed filling          |
-
+| Props             | Type             | Description                      | Default        |
+|-------------------|------------------|----------------------------------|----------------|
+| max*              | `Number`         | Max value                        | - `(required)` |
+| value*            | `Number`         | Current value                    | - `(required)` |
+| size              | `Number, String` | Size of the circle               | `'124'`        |
+| colorFilled       | `String`         | Circle color if limit exceed     | `'#FF5533'`    |
+| colorUnfilled     | `String`         | Circle color if limit not exceed | `'#3BB44A'`    |
+| colorBack         | `String`         | Back circle color                | `'#ECEEF1'`    |
+| percentage        | `BooleaN`        | Show percentage                  | `false`        |
+| rounded           | `BooleaN`        | Rounding the circle line         | `false`        |
+| animationDuration | `String`         | Animation Duration               | `'0.5s'`       |
+| strokeWidth       | `String`         | Circle Stroke width              | `'5px'`        |
+| reversedFilling   | `Boolean`        | Enable reversed filling          | `false`        |
 
 ## Other
 
@@ -44,8 +43,8 @@ Also you can use slots to throw your custom content. For example:
 
 ```
 <CircleProgressBar  
-  :value="value"  
-  :max="max"  
+  :value="20"  
+  :max="80"  
   percentage  
  rounded>
 {{ value }} / {{ max }}

@@ -2,7 +2,7 @@
     <div class="circle-progress">
         <svg
             class="circle-progress__svg"
-            viewBox="0 0 104 104"
+            viewBox="-2 -2 108 108"
             :width="size"
             :height="size"
         >
