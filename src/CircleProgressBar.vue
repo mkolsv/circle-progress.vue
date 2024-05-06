@@ -2,7 +2,7 @@
     <div class="circle-progress">
         <svg
             class="circle-progress__svg"
-            viewBox="-2 -2 108 108"
+            viewBox="-2 -2 106 106"
             :width="size"
             :height="size"
         >
@@ -118,10 +118,13 @@ const fillingCircleStyles = computed(() => {
     }
 });
 
+const strokeWidthInt = parseInt(props.strokeWidth);
+const adjustedRadius = 48 - (strokeWidthInt - 5) / 2;
+
 const currentFormatted = computed(() => isLimitReached.value ? props.max : props.value);
 
 const fillingCircle = ref(null);
-const radius = ref(48);
+const radius = ref(adjustedRadius);
 const dashArray = computed(() => radius.value * Math.PI * 2);
 const dashOffset = computed(() => {
     if (props.reversedFilling) return dashArray.value - dashArray.value * (props.max - currentFormatted.value) / props.max;
