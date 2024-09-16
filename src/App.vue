@@ -1,10 +1,9 @@
 <template>
     <div class="circle-wrapper">
         <img alt="Circle Progress Vue" src="./assets/vue.svg">
-        <h1 class="circle-title">MCircle Progress Bar</h1>
-        <p>for Vue 3</p>
-        <p>Highly customizable & lightweight circular progressbar component for Vue 3, built with SVG and extensively
-            customizable</p>
+        <h1 class="circle-title">circle-progress.vue 😍</h1>
+        <p class="circle-description">Highly customizable & lightweight circular progressbar component for Vue 3, built with SVG and extensively
+            customizable 🥰</p>
         <div class="circle-inputs">
             <div class="circle-input__wrapper">
                 <p class="circle-input__title circle-input__current">Current Value</p>
@@ -54,5 +53,11 @@ const max = ref(100);
 .circle-input {
     padding: 10px;
     outline: none;
+}
+
+.circle-description {
+  font-size: 20px;
+  max-width: 400px;
+  text-align: center;
 }
 </style>

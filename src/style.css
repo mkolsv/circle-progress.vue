@@ -1,4 +1,10 @@
 html, body, #app {
     height: 100%;
-    font-family: sans-serif;
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+
+p {
+    line-height: 1.7;
+    letter-spacing: .2px;
+    color: #213547;
 }
