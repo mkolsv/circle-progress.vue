@@ -1,7 +1,7 @@
 {
   "name": "circle-progress.vue",
   "private": false,
-  "version": "3.2.1",
+  "version": "3.2.2",
   "author": "mkolsv <mwkolosov@gmail.com> (https://github.com/mkolsv)",
   "files": [
     "dist"
@@ -34,7 +34,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.2",
     "vite-plugin-css-injected-by-js": "^3.3.0",
-    "vite": "5.0.6",
+    "vite": "5.2.6",
     "vue": "^3.3.10"
   },
   "description": "![Circle Progress Bar](https://lh6.googleusercontent.com/fLQLNNyHZoBeyAkqRDEBqZwm5GN_ROBnm0OVIiZ4gw4DJa6i2KbGwiOisZl6UdyA9c4=w2400)",
