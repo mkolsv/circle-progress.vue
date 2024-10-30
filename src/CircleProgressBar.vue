@@ -16,11 +16,11 @@
                 class="circle-progress__circle circle-progress__line--top"
                 :class="fillingCircleClasses"
                 :style="fillingCircleStyles"
+                :transform="`rotate(${adjustedStartAngle} 52 52)`"
                 ref="fillingCircle"
                 :r="radius"
                 cx="52"
                 cy="52"
-                transform="rotate(-270 52 52)"
             />
         </svg>
 
@@ -99,6 +99,12 @@ const props = defineProps({
         type: [String, Number],
         required: false,
         default: '124'
+    },
+
+    startAngle: {
+      type: Number,
+      required: false,
+      default: 180
     }
 });
 
@@ -122,6 +128,7 @@ const strokeWidthInt = parseInt(props.strokeWidth);
 const adjustedRadius = 48 - (strokeWidthInt - 5) / 2;
 
 const currentFormatted = computed(() => isLimitReached.value ? props.max : props.value);
+const adjustedStartAngle = computed(() => props.startAngle - 90);
 
 const fillingCircle = ref(null);
 const radius = ref(adjustedRadius);
