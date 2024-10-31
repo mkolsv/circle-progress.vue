@@ -23,19 +23,20 @@ import { CircleProgressBar } from 'circle-progress.vue';
 Please write me, if you need more props :)
 You can customize your progress bars as you want. For example:
 
-| Props             | Type             | Description                      | Default        |
-|-------------------|------------------|----------------------------------|----------------|
-| max*              | `Number`         | Max value                        | - `(required)` |
-| value*            | `Number`         | Current value                    | - `(required)` |
-| size              | `Number, String` | Size of the circle               | `'124'`        |
-| colorFilled       | `String`         | Circle color if limit exceed     | `'#FF5533'`    |
-| colorUnfilled     | `String`         | Circle color if limit not exceed | `'#3BB44A'`    |
-| colorBack         | `String`         | Back circle color                | `'#ECEEF1'`    |
-| percentage        | `BooleaN`        | Show percentage                  | `false`        |
-| rounded           | `BooleaN`        | Rounding the circle line         | `false`        |
-| animationDuration | `String`         | Animation Duration               | `'0.5s'`       |
-| strokeWidth       | `String`         | Circle Stroke width              | `'5px'`        |
-| reversedFilling   | `Boolean`        | Enable reversed filling          | `false`        |
+| Props             | Type             | Description                                                              | Default        |
+|-------------------|------------------|--------------------------------------------------------------------------|----------------|
+| max*              | `Number`         | Max value                                                                | - `(required)` |
+| value*            | `Number`         | Current value                                                            | - `(required)` |
+| size              | `Number, String` | Size of the circle                                                       | `'124'`        |
+| colorFilled       | `String`         | Circle color if limit exceed                                             | `'#FF5533'`    |
+| colorUnfilled     | `String`         | Circle color if limit not exceed                                         | `'#3BB44A'`    |
+| colorBack         | `String`         | Back circle color                                                        | `'#ECEEF1'`    |
+| percentage        | `BooleaN`        | Show percentage                                                          | `false`        |
+| rounded           | `BooleaN`        | Rounding the circle line                                                 | `false`        |
+| animationDuration | `String`         | Animation Duration                                                       | `'0.5s'`       |
+| strokeWidth       | `String`         | Circle Stroke width                                                      | `'5px'`        |
+| reversedFilling   | `Boolean`        | Enable reversed filling                                                  | `false`        |
+| startAngle        | `Number`         | Allowing to specify an angle in degrees where the fill should begin | `180`          |
 
 ## Other
 

@@ -1,6 +1,6 @@
-(function(){"use strict";try{if(typeof document<"u"){var e=document.createElement("style");e.appendChild(document.createTextNode("@keyframes filling{0%{stroke-dashoffset:var(--152fcbc2)}to{stroke-dashoffset:var(--b0018f6c)}}.circle-progress__circle{fill:transparent;stroke-width:var(--e96bf46a)}.circle-progress__line--back{stroke:var(--4b02e4f2);stroke-dashoffset:0}.circle-progress__line--top{animation-name:filling;animation-duration:var(--18066ad5);animation-timing-function:ease-in;transition:.5s all}.circle-progress__line--top--rounded{stroke-linecap:round}.circle-progress{display:flex;position:relative;justify-content:center;align-items:center}.circle-progress__line--filled{stroke:var(--3c598e02)}.circle-progress__line--unfilled{stroke:var(--bf0a444a)}.circle-progress__content{position:absolute;left:0;right:0;top:0;bottom:0;display:flex;justify-content:center;align-items:center;flex-direction:column}")),document.head.appendChild(e)}}catch(t){console.error("vite-plugin-css-injected-by-js",t)}})();
-import { useCssVars as h, computed as r, ref as f, openBlock as i, createElementBlock as c, createElementVNode as o, normalizeClass as y, normalizeStyle as k, toDisplayString as x, createCommentVNode as B, renderSlot as q } from "vue";
-const C = { class: "circle-progress" }, S = ["width", "height"], b = ["r"], F = ["r"], z = { class: "circle-progress__content" }, D = {
+(function(){"use strict";try{if(typeof document<"u"){var e=document.createElement("style");e.appendChild(document.createTextNode("@keyframes filling{0%{stroke-dashoffset:var(--0f014bb6)}to{stroke-dashoffset:var(--2f449254)}}.circle-progress__circle{fill:transparent;stroke-width:var(--686651bf)}.circle-progress__line--back{stroke:var(--1665467b);stroke-dashoffset:0}.circle-progress__line--top{animation-name:filling;animation-duration:var(--e222206e);animation-timing-function:ease-in;transition:.5s all}.circle-progress__line--top--rounded{stroke-linecap:round}.circle-progress{display:flex;position:relative;justify-content:center;align-items:center}.circle-progress__line--filled{stroke:var(--1975d9f6)}.circle-progress__line--unfilled{stroke:var(--b0980662)}.circle-progress__content{position:absolute;left:0;right:0;top:0;bottom:0;display:flex;justify-content:center;align-items:center;flex-direction:column}")),document.head.appendChild(e)}}catch(t){console.error("vite-plugin-css-injected-by-js",t)}})();
+import { useCssVars as y, computed as r, ref as f, openBlock as i, createElementBlock as o, createElementVNode as c, normalizeClass as k, normalizeStyle as x, toDisplayString as q, createCommentVNode as B, renderSlot as C } from "vue";
+const S = { class: "circle-progress" }, b = ["width", "height"], F = ["r"], N = ["transform", "r"], z = { class: "circle-progress__content" }, A = {
   key: 0,
   class: "circle-progress__percentage"
 }, I = {
@@ -58,17 +58,22 @@ const C = { class: "circle-progress" }, S = ["width", "height"], b = ["r"], F = 
       type: [String, Number],
       required: !1,
       default: "124"
+    },
+    startAngle: {
+      type: Number,
+      required: !1,
+      default: 180
     }
   },
   setup(t) {
-    h((d) => ({
-      "152fcbc2": l.value,
-      b0018f6c: u.value,
-      e96bf46a: e.strokeWidth,
-      "4b02e4f2": e.colorBack,
-      "18066ad5": e.animationDuration,
-      "3c598e02": e.colorFilled,
-      bf0a444a: e.colorUnfilled
+    y((d) => ({
+      "0f014bb6": l.value,
+      "2f449254": u.value,
+      "686651bf": e.strokeWidth,
+      "1665467b": e.colorBack,
+      e222206e: e.animationDuration,
+      "1975d9f6": e.colorFilled,
+      b0980662: e.colorUnfilled
     }));
     const e = t, s = r(() => e.max <= e.value), g = r(() => ({
       "circle-progress__line--top--rounded": e.rounded,
@@ -77,34 +82,34 @@ const C = { class: "circle-progress" }, S = ["width", "height"], b = ["r"], F = 
     })), p = r(() => ({
       strokeDashoffset: u.value,
       strokeDasharray: l.value
-    })), _ = 48 - (parseInt(e.strokeWidth) - 5) / 2, n = r(() => s.value ? e.max : e.value), v = f(null), a = f(_), l = r(() => a.value * Math.PI * 2), u = r(() => e.reversedFilling ? l.value - l.value * (e.max - n.value) / e.max : l.value - l.value * n.value / e.max), m = r(() => Math.floor(e.value / e.max * 100) + "%");
-    return (d, N) => (i(), c("div", C, [
-      (i(), c("svg", {
+    })), _ = 48 - (parseInt(e.strokeWidth) - 5) / 2, n = r(() => s.value ? e.max : e.value), v = r(() => e.startAngle - 90), m = f(null), a = f(_), l = r(() => a.value * Math.PI * 2), u = r(() => e.reversedFilling ? l.value - l.value * (e.max - n.value) / e.max : l.value - l.value * n.value / e.max), h = r(() => Math.floor(e.value / e.max * 100) + "%");
+    return (d, E) => (i(), o("div", S, [
+      (i(), o("svg", {
         class: "circle-progress__svg",
         viewBox: "-2 -2 106 106",
         width: t.size,
         height: t.size
       }, [
-        o("circle", {
+        c("circle", {
           class: "circle-progress__circle circle-progress__line--back",
           r: a.value,
           cx: "52",
           cy: "52"
-        }, null, 8, b),
-        o("circle", {
-          class: y(["circle-progress__circle circle-progress__line--top", g.value]),
-          style: k(p.value),
+        }, null, 8, F),
+        c("circle", {
+          class: k(["circle-progress__circle circle-progress__line--top", g.value]),
+          style: x(p.value),
+          transform: `rotate(${v.value} 52 52)`,
           ref_key: "fillingCircle",
-          ref: v,
+          ref: m,
           r: a.value,
           cx: "52",
-          cy: "52",
-          transform: "rotate(-270 52 52)"
-        }, null, 14, F)
-      ], 8, S)),
-      o("div", z, [
-        t.percentage ? (i(), c("span", D, x(m.value), 1)) : B("", !0),
-        q(d.$slots, "default")
+          cy: "52"
+        }, null, 14, N)
+      ], 8, b)),
+      c("div", z, [
+        t.percentage ? (i(), o("span", A, q(h.value), 1)) : B("", !0),
+        C(d.$slots, "default")
       ])
     ]));
   }
