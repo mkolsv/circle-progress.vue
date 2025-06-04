@@ -139,7 +139,8 @@ const dashOffset = computed(() => {
 });
 
 const getPercentage = computed(() => {
-    return Math.floor(props.value / props.max * 100) + '%';
+    const percentage = Math.floor(props.value / props.max * 100);
+    return (percentage > 100 ? 100 : percentage) + '%';
 });
 </script>
 
