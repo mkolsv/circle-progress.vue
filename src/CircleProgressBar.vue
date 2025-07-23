@@ -86,7 +86,13 @@ const props = defineProps({
     strokeWidth: {
         type: String,
         required: false,
-        default: '5px'
+        default: '10px'
+    },
+
+    strokeWidthUnfilled: {
+        type: String,
+        required: false,
+        default: '20px'
     },
 
     reversedFilling: {
@@ -109,6 +115,10 @@ const props = defineProps({
 });
 
 const isLimitReached = computed(() => props.max <= props.value);
+
+const strokeWidthFilled = computed(() => props.strokeWidth);
+const strokeWidthUnfilledComputed = computed(() => props.strokeWidthUnfilled || props.strokeWidth);
+
 const fillingCircleClasses = computed(() => {
     return {
         'circle-progress__line--top--rounded': props.rounded,
@@ -124,8 +134,10 @@ const fillingCircleStyles = computed(() => {
     }
 });
 
-const strokeWidthInt = parseInt(props.strokeWidth);
-const adjustedRadius = 48 - (strokeWidthInt - 5) / 2;
+const strokeWidthFilledInt = parseInt(strokeWidthFilled.value);
+const strokeWidthUnfilledInt = parseInt(strokeWidthUnfilledComputed.value);
+const maxStrokeWidth = Math.max(strokeWidthFilledInt, strokeWidthUnfilledInt);
+const adjustedRadius = 48 - (maxStrokeWidth - 5) / 2;
 
 const currentFormatted = computed(() => isLimitReached.value ? props.max : props.value);
 const adjustedStartAngle = computed(() => props.startAngle - 90);
@@ -155,15 +167,16 @@ const getPercentage = computed(() => {
 
 .circle-progress__circle {
     fill: transparent;
-    stroke-width: v-bind("props.strokeWidth");
 }
 
 .circle-progress__line--back {
     stroke: v-bind("props.colorBack");
+    stroke-width: v-bind("strokeWidthUnfilledComputed");
     stroke-dashoffset: 0;
 }
 
 .circle-progress__line--top {
+    stroke-width: v-bind("strokeWidthFilled");
     animation-name: filling;
     animation-duration: v-bind("props.animationDuration");
     animation-timing-function: ease-in;
