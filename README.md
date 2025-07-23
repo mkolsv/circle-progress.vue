@@ -35,6 +35,7 @@ You can customize your progress bars as you want. For example:
 | rounded           | `BooleaN`        | Rounding the circle line                                                 | `false`        |
 | animationDuration | `String`         | Animation Duration                                                       | `'0.5s'`       |
 | strokeWidth       | `String`         | Circle Stroke width                                                      | `'5px'`        |
+| strokeWidthUnfilled | `String`       | Unfilled circle stroke width (if not provided, uses strokeWidth)        | `'20px'`       |
 | reversedFilling   | `Boolean`        | Enable reversed filling                                                  | `false`        |
 | startAngle        | `Number`         | Allowing to specify an angle in degrees where the fill should begin | `180`          |
 
@@ -51,3 +52,11 @@ Also you can use slots to throw your custom content. For example:
 {{ value }} / {{ max }}
 </CircleProgressBar>
 ```
+
+## Support the Project
+
+If you find this component helpful, consider supporting its development! ☕
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-☕-orange?style=for-the-badge&logo=buy-me-a-coffee&logoColor=white)](https://coff.ee/mkolsv)
+
+Your support helps keep this project alive and continuously improved! 🚀
