@@ -92,7 +92,7 @@ const props = defineProps({
     strokeWidthUnfilled: {
         type: String,
         required: false,
-        default: '20px'
+        default: '10px'
     },
 
     reversedFilling: {
